@@ -1,0 +1,362 @@
+-> C++ Notları :
+
+###########################################################
+ - KAÇIŞ KARAKTERLERİ -
+ 
+ -> stringlerde kullanılırlar 
+ -> \n -> alt satıra geçer 
+ -> \t -> 1 tab boşluk bırakır 
+ -> \a -> bilgisayardan bir bip sesi gelir 
+ -> \ -> önüne gelen krakterin özel olmasını engeller veya özellik katar 
+ 
+###########################################################
+
+
+      - ALGORİTMA -
+
+1- Çaydanlığı ocağın üstüne koy.
+2- Ocağı ateşle.
+3- Suyun kaynamasını bekle.
+4- Suy kaynadı mı? (Evet ise 5. adıma geç, hayırsa 3. Adıma geç.)
+5- Çayı demle.
+
+###########################################################
+
+#include <iostream> // ön işlemci, kütüphane
+
+using namespace std;
+
+int main() // fonksiyon belirityoruz kütüphane burda çalışcak.
+{
+
+    cout << "Hello World\n";
+
+}
+
+
+
+
+###########################################################
+
+ -> Değişkenler 
+ 
+ 
+ int sayi; // değişken böyle tanımlanır. Burda int değerinde veri türü verilir.
+ 
+ 
+-Değişkenler herhangi bir sayı ile başlayamaz.
+-Özel karakter ile başlayamaz.
+-Büyük küçük harfe duyarlıdır.
+-Cpp içindeki komutlar değişken olamaz.
+
+
+
+###########################################################
+
+ - OUTPUT YAZDIRMAK, İNPUT ALMAK -
+
+-> int sayi1,sayi2,sonuc; Bu şekilde de tanımlanabilir.
+    cout : Bir çıktı objesidir. EKrana yazdırmadır.
+    "<<" operator  : stream insertion
+-> cout << "4+2 = " << 4+2;
+
+    ">>" operator : stream extraction
+-> cin >> "Burda bizden girdi beklicektir" yani cin komutu girdi alır
+
+
+###########################################################
+
+ - VERİ TİPLERİ -
+ 
+ -> int (tamsayı) -> 6, -67, 0
+ -> short (kısa tamsayı)
+ -> long (uzun tamsayı)
+ -> unsigned int (işaretsiz tam sayı)
+ 
+ -> string (metinsel veri) tipidir.
+ 
+ -> const = sabitleme veri tipidir.
+ 
+ 
+ -> bool (mantıksal), (true, false)
+ 
+ -> float (reel sayi) , kesirli sayılar, 4.89
+ -> double (double duyarlı reel) , -2.876
+ -> long double (uzun duyaralı reel)
+ 
+ -> char (karakter) -> 'A' , '7'
+ 
+ Değişkenleri tanımlarken veri tipinin boyutu kadar bellekte yer
+ yer açılır
+
+
+###########################################################
+
+ - OPERATÖRLER -
+ ---------------
+ '=' -> assigment (atama) operatörü
+ '-' -> çıkarma
+ '+' -> toplama
+ '*' -> çarpma
+ '/' -> bölme
+ '%' -> kalan 
+
+
+ - En öncelikli operatörler -
+   ------------------------
+   '()' -> en önceklikli bu
+   '*,/,%' -> sonra bunlar
+   '+,-' -> en son da bunlar öncelik olur
+   
+   
+  - MANTIKSAL OPERATÖRLER -
+  -------------------------
+  '||' -> Veya
+  '&&' -> Ve
+  '!='  -> Değil
+  '==' -> EŞittir
+  
+  
+ ########################################################### 
+  
+  
+ -> y = ++x; önce atama yap sonra arttır
+ -> y = x++; önce arttır sonr atama yap
+   
+   
+###########################################################
+
+ -KOŞUL İFADELERİ -
+ ------------------
+ 
+ if (koşul)
+ {
+ buraya da koşul sağldağında yazılacak değerler yazılacaktır.
+ }
+ 
+ else if (2. koşul)
+ {
+ burayada ikinci koşulumuzu sağlarsa ne yazılacağını yazıyoruz.
+ }
+ 
+ else = burda da eğer yukardaki koşullarımız sağlamıyorsa bunu yap 
+ {
+ else yi sağlarsa verilenler yazılacak.
+ }
+
+
+
+
+
+switch (secim)
+{
+    case 1:
+      break;
+    
+    case 2:
+      break;
+      
+      
+    default:
+      break;      
+}
+
+###########################################################
+
+ - LOOPS -
+ ---------
+ 
+->   while (koşul)
+  {
+  koşul sağlanırsa içerikler çalışır;
+  }
+
+
+
+->    do
+    {
+        İşlem
+    
+    } while(koşul)
+    
+    
+    
+->  int sayac;
+  for (i = 0 i sayısının başlangıcı; i <koşul; i++ i  sayısının işlemi) 
+  {
+    işlem
+  }
+
+###########################################################
+
+
+ - ARRAYS -
+
+
+  int dizi[5] = {1,2,3,4,5};
+  for (int i = 0; i < 5; i++)
+  {
+    cout << dizi[i] << endl;
+  }
+  
+  
+  
+-> ÇOK BOYUTLU DİZİLER
+
+  int cokBouytluDizi[3][3] = {
+    {9,8,7},{6,5,4},{3,2,1}
+  };
+  cout << cokBouytluDizi[0][1];
+  
+  
+  
+###########################################################
+
+
+ - VECTÖRLER -
+ 
+  vector<int>benimVektorum(10,6);
+  cout << benimVektorum.size();
+  for (int i = 0; i < benimVektorum.size(); i++) 
+  {
+    cout << benimVektorum[i] << endl;
+  }
+  
+###########################################################
+
+
+ - FONKSİYONLAR -
+ 
+-> fonksiyonlar neden önemli?
+
+-> kodumuzu kısaltmak ve daha okunaklı yapmak bakımını kolaylaştırmak için 
+fonksiyonlar çok onemlidir 
+
+-> sürekli tekrar eden kodlardan kurtulmamızı s
+ 
+
+ 
+ #include <iostream>
+using namespace std;
+
+
+void besleTopla(int gecensayi)
+{
+  cout << 5 + gecensayi;
+  
+}
+
+
+int main()
+{
+  int sayi;
+  cout << "Lütfen bir sayı giriniz : ";
+  cin >> sayi;
+  besleTopla(sayi);
+  return 0;
+}
+
+
+###########################################################
+
+
+ - ÖNCEDEN TANIMLANMIŞ FONKSİYONLAR -
+   -------------------------------- 
+ 
+ cmath ve cstdlib kütüphanelerini include ediyoruz
+
+-> sqrt(9) -> 9 un karekökünü alır 
+-> pow(9,2) -> 9 un karesini alır 3 vs de yaılabilir 
+-> exit(1) -> programı sonlandırır 
+  
+
+###########################################################
+
+
+ - TEMEL VOİD FONKSİYONU -
+   ---------------------
+   
+   
+ void yazdır(void /*burasıda arguman almıcak demektir*/)
+ {
+	cout << "merhaba" << endl;
+ }
+
+buradaki void demek bize işlemler bitinde değer döndürmeyecek demektir 
+
+şu şekildede tanımlanabnilir 
+
+void yazdir(); // ; ü unutmamak lazım!
+
+int main()
+{
+	// kodlar 
+	yazdir()
+}
+
+void yazdir()
+{
+	cout << "hello word" << endl;
+}
+
+yukarıda işleme fonksiyon prototipi ile kullanmak demektir eğer 
+üst kısımda tanımlanmaz ise bu fonksiyon derleme esnasında hata verir 
+
+
+###########################################################
+ 
+ 
+ - DEĞER DÖNDÜREN FONKSİYONLAR -
+   ---------------------------
+   
+   
+ -> bu sefer döndüreceğimiz değer tipinde bir fonksiyon tanımlalamız lazım 
+
+int test ()
+{
+	int sayi;
+	return sayi*sayi; -> gibi değer döndürürler 	
+}
+
+int x = test() şeklinde değer atanabilir birbirine 
+
+###########################################################
+
+
+ - GLOBAL-LOCAL DEĞİŞKENLER STATİC LOKAL DEĞİŞKENLER -
+   -------------------------------------------------
+ 
+ -> lokal değişkenler süslü parantezler arasında tanımlanan değişkenlerdir 
+
+int main()
+{
+	// burada tanımlanan değişkenler lokaldir 
+}
+
+ -> global değişkenler ise bu süslü parantezlerin dışında programımızın üst kısmında yer alan
+değişkenlerdir 
+
+NOT: değişkenler tanımlandıkları scope larda yani süslü parantezler arasında ulaşılabilirdir 
+bir fonksiyonda tanımlı olan bir değişken main içerisinde kullanılamaz mesela 
+
+ -> global değişkenler ise her yerden erişilebilirlerdir 
+main içinde çağırıp değeri değiştirirsek fonksiyon içindede değiştirilmiş değer ile erişilir 
+
+{
+	// bu alana scopa alanı denmektedir 
+}
+
+ - STATİC LOKAL DEĞİŞKENLER -
+  -------------------------
+ 
+ -> değişkenlerimizin bizim tanımladığımız fonksiyon haricinde kullanılmaması ama aynı
+zamanda fonksiyon sonlandğı zaman değişkenimizin silinmemesini sağlar program bittiği
+ zaman silinirler 
+
+static int a = 0; şeklinde tanımlanabilmektedir
+
+
+###########################################################
+ 
+
+
